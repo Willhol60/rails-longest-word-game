@@ -1,0 +1,15 @@
+<h1>Result</h1>
+
+
+<p>Your guess: <%= @answer %></p>
+<%= @letters %>
+
+<% if !@validity %>
+  <p>Sorry, <strong><%= @answer %></strong> can't be made out of the available letters.</p>
+<% elsif !@realness %>
+  <p>Sorry, <strong><%= @answer %></strong> isn't a real word.</p>
+<% else %>
+  <p>Awesome, <strong><%= @answer %></strong> is a valid answer!</p>
+<% end %>
+
+<%= link_to 'Play again', '/new' %>
