@@ -2,14 +2,15 @@ require 'open-uri'
 require 'json'
 
 class GamesController < ApplicationController
+  def home
+  end
+
   def new
     alphabet = ('A'..'Z').to_a
     @letters = []
     10.times do
       @letters << alphabet.sample
     end
-    session
-    raise
   end
 
   def score
